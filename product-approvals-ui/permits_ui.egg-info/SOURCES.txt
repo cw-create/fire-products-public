@@ -1,0 +1,8 @@
+README.md
+setup.py
+permits_ui.egg-info/PKG-INFO
+permits_ui.egg-info/SOURCES.txt
+permits_ui.egg-info/dependency_links.txt
+permits_ui.egg-info/top_level.txt
+src/__init__.py
+src/app.py

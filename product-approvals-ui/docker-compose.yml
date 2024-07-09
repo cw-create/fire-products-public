@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      dockerfile: ./Dockerfile
+    platform: linux/amd64
+    image: gcr.io/international-public-sector/product-approval-ui
+    ports:
+      - "3003:8080"  # Map port 3003 on the host to port 8080 in the container
+    volumes:
+      - ./src:/workspace/product-approvals/src  # Mount the project directory
+    env_file:
+      - .env
+    # override the env on the entrypoint
+    environment:
+      - HOSTNAME
