@@ -2,9 +2,6 @@ import os
 
 import streamlit as st
 from handlers.product_handlers import ProductHandler
-from utils.loggers import logger_name, make_logger
-
-logger = make_logger(logger_name())
 
 logo_path = os.path.join(os.path.dirname(__file__), "public/scale-logo.svg")
 st.set_page_config(
@@ -206,7 +203,6 @@ def main():
             )
 
         except Exception:
-            logger.exception("Error during validation")
             st.error(
                 "An error occurred during the validation process. Please check the logs for more details."
             )
