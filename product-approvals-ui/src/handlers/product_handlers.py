@@ -3,13 +3,9 @@ import time
 
 import requests
 import streamlit as st
-from utils.loggers import logger_name, make_logger
-
-logger = make_logger(logger_name())
 
 INTERNAL_API_KEY = os.environ.get("INTERNAL_API_KEY", "")
 HOSTNAME = os.environ.get("HOSTNAME", "https://product-approvals-gf3dkeclfa-ww.a.run.app")
-logger.info(f"HOSTNAME: {HOSTNAME}")
 
 
 class ProductHandler:
